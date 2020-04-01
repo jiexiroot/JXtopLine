@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/ad_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:id="@+id/cpy_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="135dp"
+                android:layout_height="48.6dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo_ho" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jiexi_copyright"
+                android:textColor="#C7C7C7" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/skip_btn"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:background="@drawable/splash_but_style"
+            android:text="@string/splash_btn"
+            android:textColor="#9E9E9E"
+            android:layout_alignBottom="@+id/cpy_logo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textSize="18dp"/>
+    </RelativeLayout>
+</LinearLayout>
