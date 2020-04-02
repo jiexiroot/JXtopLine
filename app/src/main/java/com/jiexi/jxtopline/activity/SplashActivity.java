@@ -1,4 +1,4 @@
-package com.jiexi.jxtopline;
+package com.jiexi.jxtopline.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.jiexi.jxtopline.MainActivity;
+import com.jiexi.jxtopline.R;
 
 import java.util.Timer;
 import java.util.TimerTask;
