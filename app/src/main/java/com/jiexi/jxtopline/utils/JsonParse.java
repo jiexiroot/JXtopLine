@@ -1,5 +1,7 @@
 package com.jiexi.jxtopline.utils;
 
+import android.util.Log;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.jiexi.jxtopline.bean.ConstellationBean;
@@ -20,6 +22,13 @@ public class JsonParse {
         }
         return instance;
     }
+    //根据泛型返回解析制定的类型
+    public  <T> T fromToJson(String json,Type listType){
+        Gson gson = new Gson();
+        T t = null;
+        t = gson.fromJson(json,listType);
+        return t;
+    }
     public List<NewsBean> getAdList(String json) {
         //使用gson库解析JSON数据
         Gson gson = new Gson();
@@ -27,7 +36,8 @@ public class JsonParse {
         Type listType = new TypeToken<List<NewsBean>>() {
         }.getType();
         //把获取到的信息集合存到adList中
-        List<NewsBean> adList = gson.fromJson(json, listType);
+        Log.d("tag", "getAdList: "+json);
+        List<NewsBean> adList = fromToJson(json,listType);
         return adList;
     }
     public List<NewsBean> getNewsList(String json) {
@@ -37,7 +47,8 @@ public class JsonParse {
         Type listType = new TypeToken<List<NewsBean>>() {
         }.getType();
         //把获取到的信息集合存到newsList中
-        List<NewsBean> newsList = gson.fromJson(json, listType);
+        Log.d("tag", "getNewsList: "+json);
+        List<NewsBean> newsList = fromToJson(json, listType);
         return newsList;
     }
     public List<PythonBean> getPythonList(String json) {

@@ -2,6 +2,7 @@ package com.jiexi.jxtopline;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Build;
@@ -12,6 +13,12 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.jiexi.jxtopline.adapter.MyFragmentPagerAdapter;
+import com.jiexi.jxtopline.fragment.HomeFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
@@ -55,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         viewPager = (ViewPager) findViewById(R.id.viewPager);
+        HomeFragment homeFragment=new HomeFragment();
+        List<Fragment> alFragment = new ArrayList<Fragment>();
+        alFragment.add(homeFragment);
+        //ViewPager设置适配器
+        viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),
+                alFragment));
+        viewPager.setCurrentItem(0); //ViewPager显示第一个Fragment
         //ViewPager页面切换监听
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

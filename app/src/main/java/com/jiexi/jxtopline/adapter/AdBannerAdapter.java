@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.jiexi.jxtopline.bean.NewsBean;
 import com.jiexi.jxtopline.fragment.AdBannerFragment;
+import com.jiexi.jxtopline.fragment.HomeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +62,7 @@ public class AdBannerAdapter extends FragmentStatePagerAdapter implements
     }
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-//        mHandler.removeMessages(HomeFragment.MSG_AD_SLID);
+        mHandler.removeMessages(HomeFragment.MSG_AD_SLID);
         return false;
     }
 }
