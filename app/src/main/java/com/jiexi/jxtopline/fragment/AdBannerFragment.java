@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.jiexi.jxtopline.R;
+import com.jiexi.jxtopline.activity.NewsDetailActivity;
 import com.jiexi.jxtopline.bean.NewsBean;
 
 
@@ -57,6 +58,10 @@ public class AdBannerFragment extends Fragment {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (nb == null) return;
+                Intent intent = new Intent(getActivity(), NewsDetailActivity.class);
+                intent.putExtra("newsBean", nb);
+                getActivity().startActivity(intent);
             }
         });
         return iv;

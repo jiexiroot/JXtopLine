@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.jiexi.jxtopline.R;
+import com.jiexi.jxtopline.activity.NewsDetailActivity;
 import com.jiexi.jxtopline.bean.NewsBean;
 
 import java.util.List;
@@ -80,6 +81,9 @@ public class HomeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(context, NewsDetailActivity.class);
+                intent.putExtra("newsBean", bean);
+                context.startActivity(intent);
             }
         });
     }

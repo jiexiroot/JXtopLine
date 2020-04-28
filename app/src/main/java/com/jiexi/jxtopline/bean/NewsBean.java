@@ -8,7 +8,7 @@ public class NewsBean implements Serializable {
     //若type为1（黑马新闻）显示一张图片的布局，为2（黑马推荐）显示三张图片的布局
     private int type;
     private String newsName;      //新闻名称
-    private String newsTypeName; //新闻类型，是黑马新闻还是黑马推荐
+    private String newsTypeName; //新闻类型
     private String img1;           //新闻图片1
     private String img2;      //新闻图片2
     private String img3;     //新闻图片3

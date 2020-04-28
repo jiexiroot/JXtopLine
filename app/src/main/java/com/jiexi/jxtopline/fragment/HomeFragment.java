@@ -18,6 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.itheima.PullToRefreshView;
 import com.jiexi.jxtopline.R;
+import com.jiexi.jxtopline.activity.PythonActivity;
 import com.jiexi.jxtopline.adapter.AdBannerAdapter;
 import com.jiexi.jxtopline.adapter.HomeListAdapter;
 import com.jiexi.jxtopline.bean.NewsBean;
@@ -130,6 +131,8 @@ public class HomeFragment extends Fragment {
         ll_python.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), PythonActivity.class);
+                startActivity(intent);
             }
         });
     }
