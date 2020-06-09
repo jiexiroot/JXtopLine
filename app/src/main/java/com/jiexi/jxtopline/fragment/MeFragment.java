@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -21,7 +22,11 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.jiexi.jxtopline.R;
+import com.jiexi.jxtopline.activity.CalendarActivity;
+import com.jiexi.jxtopline.activity.ConstellationActivity;
 import com.jiexi.jxtopline.activity.LoginActivity;
+import com.jiexi.jxtopline.activity.MapActivity;
+import com.jiexi.jxtopline.activity.ScrawActivity;
 import com.jiexi.jxtopline.activity.UserInfoActivity;
 import com.jiexi.jxtopline.receiver.UpdateUserInfoReceiver;
 import com.jiexi.jxtopline.utils.DBUtils;
@@ -111,20 +116,20 @@ public class MeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ll_calendar:
-//                Intent calendarIntent = new Intent(getActivity(), CalendarActivity.class);
-//                startActivity(calendarIntent);
+                Intent calendarIntent = new Intent(getActivity(), CalendarActivity.class);
+                startActivity(calendarIntent);
                 break;
             case R.id.ll_constellation:
-//                Intent constellIntent = new Intent(getActivity(), ConstellationActivity.class);
-//                startActivity(constellIntent);
+                Intent constellIntent = new Intent(getActivity(), ConstellationActivity.class);
+                startActivity(constellIntent);
                 break;
             case R.id.ll_scraw:
-//                Intent scarwIntent = new Intent(getActivity(), ScrawActivity.class);
-//                startActivity(scarwIntent);
+                Intent scarwIntent = new Intent(getActivity(), ScrawActivity.class);
+                startActivity(scarwIntent);
                 break;
             case R.id.ll_map:
-//                Intent mapIntent = new Intent(getActivity(), MapActivity.class);
-//                startActivity(mapIntent);
+                Intent mapIntent = new Intent(getActivity(), MapActivity.class);
+                startActivity(mapIntent);
                 break;
             case R.id.rl_collection:
                 if (isLogin) {
