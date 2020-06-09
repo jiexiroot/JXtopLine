@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.jiexi.jxtopline.adapter.MyFragmentPagerAdapter;
 import com.jiexi.jxtopline.fragment.CountFragment;
 import com.jiexi.jxtopline.fragment.HomeFragment;
+import com.jiexi.jxtopline.fragment.MeFragment;
 import com.jiexi.jxtopline.fragment.VideoFragment;
 
 import java.util.ArrayList;
@@ -68,10 +69,13 @@ public class MainActivity extends AppCompatActivity {
         HomeFragment homeFragment=new HomeFragment();
         CountFragment countFragment = new CountFragment();
         VideoFragment videoFragment = new VideoFragment();
+        MeFragment meFragment = new MeFragment();
         List<Fragment> alFragment = new ArrayList<Fragment>();
         alFragment.add(homeFragment);
         alFragment.add(countFragment);
         alFragment.add(videoFragment);
+        alFragment.add(meFragment);
+        viewPager.setOffscreenPageLimit(3);  //三个界面之间来回切换都不会重新加载数据
         //ViewPager设置适配器
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),
                 alFragment));
