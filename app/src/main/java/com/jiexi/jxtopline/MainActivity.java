@@ -9,13 +9,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.WebViewFragment;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jiexi.jxtopline.adapter.MyFragmentPagerAdapter;
+import com.jiexi.jxtopline.fragment.CountFragment;
 import com.jiexi.jxtopline.fragment.HomeFragment;
+import com.jiexi.jxtopline.fragment.VideoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,8 +66,12 @@ public class MainActivity extends AppCompatActivity {
         });
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         HomeFragment homeFragment=new HomeFragment();
+        CountFragment countFragment = new CountFragment();
+        VideoFragment videoFragment = new VideoFragment();
         List<Fragment> alFragment = new ArrayList<Fragment>();
         alFragment.add(homeFragment);
+        alFragment.add(countFragment);
+        alFragment.add(videoFragment);
         //ViewPager设置适配器
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),
                 alFragment));
