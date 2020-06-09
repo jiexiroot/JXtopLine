@@ -24,12 +24,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".activity.CollectionActivity"></activity>
+
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="kF5aMZ33VLmXubRml6GRx22Qq4ppLyoP" />
-
+        <activity
+            android:name=".activity.FindPswActivity"
+            android:theme="@style/AppTheme.TransparentActivity" />
+        <activity
+            android:name=".activity.ModifyPswActivity"
+            android:theme="@style/AppTheme.TransparentActivity" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:theme="@style/AppTheme.TransparentActivity" />
+        <activity android:name=".activity.CollectionActivity" />
         <activity
             android:name=".activity.MapActivity"
             android:theme="@style/AppTheme.TransparentActivity" />

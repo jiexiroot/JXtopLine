@@ -1,6 +1,6 @@
 package com.jiexi.jxtopline.utils;
 public class Constant {
-    public static final String WEB_SITE ="http://169.254.26.2:8080/JXtopline";//内网接口
+    public static final String WEB_SITE ="http://47.115.147.52:8080/topline";//内网接口
     //首页滑动广告接口
     public static final String REQUEST_AD_URL = "/home_ad_list_data.json";
     //首页新闻列表接口

@@ -51,5 +51,7 @@ dependencies {
     implementation project(path: ':calendarview')
     implementation project(path: ':bubbleviews')
     implementation 'com.google.android.gms:play-services-appindexing:9.8.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:24.2.1'
 
 }

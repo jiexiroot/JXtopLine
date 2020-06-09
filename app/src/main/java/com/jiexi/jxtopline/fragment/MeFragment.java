@@ -23,10 +23,12 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.jiexi.jxtopline.R;
 import com.jiexi.jxtopline.activity.CalendarActivity;
+import com.jiexi.jxtopline.activity.CollectionActivity;
 import com.jiexi.jxtopline.activity.ConstellationActivity;
 import com.jiexi.jxtopline.activity.LoginActivity;
 import com.jiexi.jxtopline.activity.MapActivity;
 import com.jiexi.jxtopline.activity.ScrawActivity;
+import com.jiexi.jxtopline.activity.SettingActivity;
 import com.jiexi.jxtopline.activity.UserInfoActivity;
 import com.jiexi.jxtopline.receiver.UpdateUserInfoReceiver;
 import com.jiexi.jxtopline.utils.DBUtils;
@@ -133,9 +135,9 @@ public class MeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.rl_collection:
                 if (isLogin) {
-                    //跳转到收藏界面
-//                    Intent collection = new Intent(getActivity(), CollectionActivity.class);
-//                    startActivity(collection);
+//                    跳转到收藏界面
+                    Intent collection = new Intent(getActivity(), CollectionActivity.class);
+                    startActivity(collection);
                 } else {
                     Toast.makeText(getActivity(), "您还未登录，请先登录",
                             Toast.LENGTH_SHORT).show();
@@ -143,9 +145,9 @@ public class MeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.rl_setting:
                 if (isLogin) {
-                    //跳转到设置界面
-//                    Intent settingIntent = new Intent(getActivity(), SettingActivity.class);
-//                    startActivityForResult(settingIntent, 1);
+//                    跳转到设置界面
+                    Intent settingIntent = new Intent(getActivity(), SettingActivity.class);
+                    startActivityForResult(settingIntent, 1);
                 } else {
                     Toast.makeText(getActivity(), "您还未登录，请先登录",
                             Toast.LENGTH_SHORT).show();
